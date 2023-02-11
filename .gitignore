@@ -1,4 +1,6 @@
 ._config.yml
+_config.yml
+*._config.yml
 
 # Logs
 logs
