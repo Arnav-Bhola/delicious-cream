@@ -1,5 +1,124 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet (Potrait)
+900 - 1200px:   Tablet (Landscape)
+{1200 - 1800px] is where our normal styles apply
+1800+:          Big desktop
+
+$breakpoint arguement choices: 
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
-  background-color: red;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-size: 6.4rem;
+}
+
+h3,
+h4,
+p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.hero {
+  --color-primary: hsl(184, 75%, 38%);
+  --color-primary-hue: 184;
+  --color-primary-saturation: 75%;
+  --color-primary-lightness: 50%;
+  background-image: url("../../assets/images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+}
+.hero .content {
+  margin-top: 30px;
+  margin-left: 230px;
+  color: var(--color-primary);
+}
+.hero .content h1 {
+  max-width: 407px;
+  text-shadow: 3px 2px 5px hsl(0deg, 0%, 45%);
+}
+.hero .content h3 {
+  text-shadow: 3px 2px 8px hsl(0deg, 0%, 45%);
+}
+.hero .content .cta-btn {
+  margin-top: 30px;
+}
+.hero .content button {
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: 1.6rem;
+  background-color: transparent;
+  border: none;
+  box-shadow: 1px 1px 3px 1px hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness));
+}
+.hero .content button:hover {
+  background-color: var(--color-primary);
+  color: #eee;
+}
+.hero .content button:nth-child(2) {
+  --color-primary-lightness: 30%;
+  margin: 0 10px;
+  background-color: var(--color-primary);
+  color: #eee;
+}
+.hero .content button:nth-child(2):hover {
+  --color-primary-lightness: 50%;
+  background-color: transparent;
+  color: var(--color-primary);
+}
+@media (max-width: 768px) {
+  .hero .content {
+    margin-left: 10%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

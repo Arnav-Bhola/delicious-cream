@@ -1,0 +1,74 @@
+@use '../base/utilities' as *;
+
+.hero {
+    // colors. using css variable due to some limitations with scss variables
+    --color-primary: hsl(184, 75%, 38%);
+    --color-primary-hue: 184;
+    --color-primary-saturation: 75%;
+    --color-primary-lightness: 50%;
+
+    background-image: url('../../assets/images/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+
+    .content {
+        margin-top: 30px;
+        margin-left: 230px;
+        color: var(--color-primary);
+
+        h1 {
+            max-width: 407px;
+            @include textShadow(5px, hsl(0, 0%, 45%));
+        }
+
+        h3 {
+            @include textShadow(8px, hsl(0, 0%, 45%));
+        }
+
+        .cta-btn {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 30px;
+            border-radius: 30px;
+            color: var(--color-primary);
+            font-weight: 400;
+            font-size: toRem(16);
+            background-color: transparent;
+            border: none;
+            box-shadow: 1px 1px 3px 1px hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness));
+        }
+
+        button:hover {
+            background-color: var(--color-primary);
+            color: #eee;
+
+        }
+
+        button:nth-child(2) {
+            --color-primary-lightness: 30%;
+            margin: 0 10px;
+            background-color: var(--color-primary);
+            color: #eee;
+
+            &:hover {
+                --color-primary-lightness: 50%;
+                background-color: transparent;
+                color: var(--color-primary);
+            }
+        }
+
+    }
+
+    @media(max-width: 768px) {
+
+        .content {
+            margin-left: 10%;
+        }
+    }
+}
