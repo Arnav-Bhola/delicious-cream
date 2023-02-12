@@ -6,12 +6,16 @@
 
 
     &-logo {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 900;
-        font-size: var(--navbar-logo-font-size);
-        line-height: 1.9rem;
-        color: var(--color-aqua);
+        a:link, 
+        a:visited {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: var(--navbar-logo-font-size);
+            line-height: 1.9rem;
+            color: var(--color-aqua);
+            text-decoration: none;
+        }
     }
 
     &-links {
@@ -21,17 +25,22 @@
 
     &-btn {
         border: 1.8px solid var(--color-aqua);
-        border-radius: 1.6rem;
+        border-radius: 100vw;
         width: var(--navbar-btn-width);
         height: var(--navbar-btn-height);
 
-        text-align: center;
-        font-family: 'Ubuntu';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 1.6rem;
-        line-height: 1.8rem;
-        color: var(--color-aqua);
+        a:link, 
+        a:visited {
+            text-align: center;
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+            color: var(--color-aqua);
+            text-transform: none;
+            text-decoration: none !important;
+        }
 
         display: flex;
         align-items: center;
@@ -39,7 +48,11 @@
         
         &-filled {
             background-color: var(--color-aqua);
-            color: var(--color-white);
+
+            a:link, 
+            a:visited {
+                color: var(--color-white);
+            }
         }
 
         &:not(:last-child) {
@@ -60,37 +73,44 @@
 }
 
 @include respond(tab-port) {
-    .navbar-links {
-        display: none;
-    }
-    
-    #toggle-nav {
-        display: block;
-    }
+    .navbar {
 
-    .navbar-show {
-        align-items: center;
-    }
-    
-    .navbar-links-show {
-        flex-basis: 100%;
-        margin-left: 0;
-        display: flex;
-        flex-direction: column;
+        &-links {
+            display: none;
+        }
+        
+        #toggle-nav {
+            display: block;
+        }
 
-        .navbar-btn {
-            margin-top: 0;
+        &-show {
+            align-items: center;
+        }
+        
+        &-links-show {
+            flex-basis: 100%;
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
             width: 100%;
-            border-radius: 3px;
-            font-weight: 900;
-            
-            &:first-child {
-                margin-top: 2px;
-            }
+            top: 3.2rem;
+            background-color: white;
 
-            &:not(:last-child) {
-                margin-right: 0;
-                margin-bottom: var(--navbar-link-gap-vertical);
+            .navbar-btn {
+                margin-top: 0;
+                width: 100%;
+                border-radius: .5rem;
+                font-weight: 900;
+                
+                &:first-child {
+                    margin-top: .2rem;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: var(--navbar-link-gap-vertical);
+                }
             }
         }
     }

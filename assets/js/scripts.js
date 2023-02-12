@@ -1,8 +1,8 @@
-const toggleBtn = document.querySelector("#toggle-nav");
-const navbar = document.querySelector(".navbar");
-const navbarLinks = document.querySelector(".navbar-links");
+const toggleBtn = $("#toggle-nav");
+const navbar = $(".navbar");
+const navbarLinks = $(".navbar-links");
 
-toggleBtn.addEventListener("click", function () {
-    navbar.classList.toggle("navbar-show");
-    navbarLinks.classList.toggle("navbar-links-show");
+toggleBtn.on("click", function () {
+    navbar.toggleClass("navbar-show");
+    navbarLinks.toggleClass("navbar-links-show");
 });
