@@ -1,6 +1,7 @@
 @function toRem($value) {
     $remValue: ($value / 10)+rem; // default font value is changed in _base.scss
-    @return $remValue;
+     @return $remValue;
+
 }
 
 @mixin textShadow($blur, $color) {
