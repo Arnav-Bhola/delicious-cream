@@ -7,3 +7,6 @@
 @mixin textShadow($blur, $color) {
     text-shadow: 3px 2px $blur $color;
 }
+.bg-transparent {
+    background-color: transparent !important;
+  }
