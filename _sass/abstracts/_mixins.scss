@@ -1,18 +1,3 @@
-@mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-@mixin absCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 // Media Query Manager
 /*
 0 - 600px:      Phone
@@ -43,4 +28,27 @@ $breakpoint arguement choices:
     @if $breakpoint == big-desktop {
         @media only screen and (min-width: 112.50em) { @content };       // 1800px
     }
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin imgBoxShadow {
+    box-shadow: 0 0 3rem #888888,
+}
+
+@mixin textShadow($blur, $color) {
+    text-shadow: 3px 2px $blur $color;
 }

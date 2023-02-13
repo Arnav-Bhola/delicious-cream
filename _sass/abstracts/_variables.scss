@@ -1,0 +1,30 @@
+:root {
+    // ***** COLOR *****
+    --color-aqua: #28AAAA;
+    --color-aqua-slightly-light: #189FA8;
+    --color-white: #FFFFFF;
+
+    // ***** NAVBAR *****
+    --navbar-link-gap: 2rem;
+    --navbar-link-gap-vertical: .2rem;
+    --navbar-btn-height: 4rem;
+    --navbar-btn-width: 12rem;
+    --navbar-logo-font-size: 4rem;
+    @include respond(tab-land) {
+        --navbar-btn-height: 3rem;
+        --navbar-btn-width: 9.7rem;
+        --navbar-logo-font-size: 3.7rem;
+    }
+
+    @media only screen and (max-width: 62.5em) {
+        --navbar-logo-font-size: 2.3rem;
+    };
+
+    // ***** BEST SELLERS *****
+    --best-seller-heading-font-size: 3.6rem;
+    --best-seller-grid-gap: 3rem;
+    --best-seller-img-border-radius: 2rem;
+    @media only screen and (max-width: 62.5em) {
+        --best-seller-heading-font-size: 2.7rem;
+    };
+}
