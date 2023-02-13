@@ -1,19 +1,42 @@
 .most-loved {
-    &-item {
-        
-        &-img {
 
+    &-header {
+        margin: 4rem 0;
+    }
+
+    &-carousel {
+        &-rating {
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            font-size: var(--most-loved-icon-size);
+            margin-bottom: var(--most-loved-icon-box-margin);
+
+            i {
+                color: var(--color-cream);
+
+                &:not(:last-child) {
+                    margin-right: var(--most-loved-icon-gap);
+                }
+            }
         }
 
-        &-content {
-            &-text {
+        .cell {
+            text-align: center;
 
-            }
+            p {
+                color: var(--color-cream);
+                position: absolute;
+                bottom: calc(var(--most-loved-icon-box-margin) + var(--most-loved-icon-box-margin) + var(--most-loved-icon-size));
+                right: 50%;
+                transform:translateX(50%);
 
-            &-rating {
-                &-heart {
-                    color: var(--color-cream);
-                }
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 500;
+                font-size: var(--most-loved-text-size);
+                line-height: 1.8rem;
             }
         }
     }

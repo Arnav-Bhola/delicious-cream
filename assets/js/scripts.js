@@ -7,9 +7,9 @@ toggleBtn.on("click", function () {
     navbarLinks.toggleClass("navbar-links-show");
 });
 
-const mostLovedCarousel = $('.most-loved.carousel')
-var mostLoved = new Flickity( carousel, {
+var mostLovedCarousel = document.querySelector('.most-loved-carousel');
+  var flkty = new Flickity( mostLovedCarousel, {
+    // options
     cellAlign: 'left',
-    wrapAround: true,
-    freeScroll: true,
-})
+    contain: true
+  });
