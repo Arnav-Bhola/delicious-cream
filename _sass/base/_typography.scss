@@ -1,0 +1,27 @@
+h1 {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    font-size: toRem(64);
+}
+
+h2 {
+    color: var(--color-aqua-slightly-light);
+    font-family: 'Kalam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--best-seller-heading-font-size);
+    line-height: 57px;
+    text-align: center;
+}
+
+h3,
+h4,
+p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: toRem(20);
+}
+
+p {
+    font-size: toRem(16);
+}
