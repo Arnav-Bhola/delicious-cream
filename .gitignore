@@ -108,5 +108,5 @@ dist
 .tern-port
 
 
-# _site folder should be ignore
+# _site folder should be ignored
 _site/

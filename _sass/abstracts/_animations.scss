@@ -1,46 +1,6 @@
-
-
-// slider
-
-.sliderWrapper {
-    position: sticky;
-    bottom: 100px;
-    padding-bottom: 20px;
-
-    z-index: -10;
-    overflow: hidden;
-    width: 100%;
-    // background-color: aqua;
-}
-
-.sliderContainer {
-    display: flex;
-    margin: 100px auto;
-    rotate: -8.2deg;
-    width: 120%;
-
-    .slider {
-        display: flex;
-        animation: slider 20s linear 0s infinite;
+@keyframes slider {
+    100% {
+        transform: translateX(-100%);
     }
 
-    .slide {
-        margin: 0 5px;
-        overflow: hidden;
-    }
-
-    .txt {
-        $color-primary: hsl(184, 75%, 38%);
-        font-size: 64px;
-        font-family: 'Kalam', cursive;
-        white-space: nowrap;
-        color: $color-primary;
-    }
-
-    @keyframes slider {
-        100% {
-            transform: translateX(-100%);
-        }
-
-    }
 }
