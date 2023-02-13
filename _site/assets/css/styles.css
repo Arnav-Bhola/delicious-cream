@@ -17,6 +17,7 @@ $breakpoint arguement choices:
   --color-aqua: #28AAAA;
   --color-aqua-slightly-light: #189FA8;
   --color-white: #FFFFFF;
+  --color-cream: #FFEFCB;
   --navbar-link-gap: 2rem;
   --navbar-link-gap-vertical: .2rem;
   --navbar-btn-height: 4rem;
@@ -25,6 +26,10 @@ $breakpoint arguement choices:
   --best-seller-heading-font-size: 3.6rem;
   --best-seller-grid-gap: 3rem;
   --best-seller-img-border-radius: 2rem;
+  --most-loved-icon-size: 3rem;
+  --most-loved-text-size: 1.4rem;
+  --most-loved-icon-gap: 1rem;
+  --most-loved-icon-box-margin: .7rem;
 }
 @media only screen and (max-width: 75em) {
   :root {
@@ -82,6 +87,48 @@ body {
 
 .bg-transparent {
   background-color: transparent !important;
+}
+
+.cell {
+  width: 33%;
+  height: 350px;
+  margin: 0 15px;
+  overflow: hidden;
+  border-radius: 8px;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+.cell img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  vertical-align: middle;
+}
+.cell img:hover {
+  transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -moz-transform: scale(1.2); /* Firefox */
+  -webkit-transform: scale(1.2); /* Safari and Chrome */
+  -o-transform: scale(1.2); /* Opera */
+}
+
+.cell {
+  margin: 0 0.3rem !important;
+}
+
+h2 {
+  color: var(--color-aqua-slightly-light);
+  font-family: "Kalam";
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--best-seller-heading-font-size);
+  line-height: 57px;
+  text-align: center;
 }
 
 .navbar {
@@ -180,15 +227,6 @@ body {
     margin-bottom: var(--navbar-link-gap-vertical);
   }
 }
-.section-best-sellers h2 {
-  color: var(--color-aqua-slightly-light);
-  font-family: "Kalam";
-  font-style: normal;
-  font-weight: 700;
-  font-size: var(--best-seller-heading-font-size);
-  line-height: 57px;
-  text-align: center;
-}
 .section-best-sellers .best-seller-grid {
   display: flex;
   justify-content: center;
@@ -241,6 +279,39 @@ body {
   .section-best-sellers .best-seller-grid {
     margin-top: 0.5rem;
   }
+}
+
+.most-loved-header {
+  margin: 4rem 0;
+}
+.most-loved-carousel-rating {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: var(--most-loved-icon-size);
+  margin-bottom: var(--most-loved-icon-box-margin);
+}
+.most-loved-carousel-rating i {
+  color: var(--color-cream);
+}
+.most-loved-carousel-rating i:not(:last-child) {
+  margin-right: var(--most-loved-icon-gap);
+}
+.most-loved-carousel .cell {
+  text-align: center;
+}
+.most-loved-carousel .cell p {
+  color: var(--color-cream);
+  position: absolute;
+  bottom: calc(var(--most-loved-icon-box-margin) + var(--most-loved-icon-box-margin) + var(--most-loved-icon-size));
+  right: 50%;
+  transform: translateX(50%);
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--most-loved-text-size);
+  line-height: 1.8rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
