@@ -49,3 +49,6 @@ $breakpoint arguement choices:
     box-shadow: 0 0 3rem #888888,
 }
 
+@mixin textShadow($blur, $color) {
+    text-shadow: 3px 2px $blur $color;
+}

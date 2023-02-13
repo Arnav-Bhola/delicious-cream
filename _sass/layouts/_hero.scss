@@ -1,6 +1,15 @@
-@use '../base/utilities' as *;
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
 
 // main hero
+#hero {
+    width: 99vw;
+    position: relative;
+    top: -2vw;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 .hero {
     // colors. using css variable due to some limitations with scss variables
     --color-primary: hsl(184, 75%, 38%);
@@ -89,49 +98,5 @@
             bottom: 35vh;
             margin-left: 0;
         }
-    }
-}
-
-
-// slider
-
-.sliderWrapper {
-    position: sticky;
-    bottom: 100px;
-    padding-bottom: 20px;
-
-    z-index: -10;
-    overflow: hidden;
-    width: 100%;
-    // background-color: aqua;
-}
-.sliderContainer {
-    display: flex;
-    margin: 100px auto;
-    rotate: -8.2deg;
-    width: 120%;
-    
-    .slider {
-        display: flex;
-        animation: slider 20s linear 0s infinite;
-    }
-    
-    .slide {   
-        margin: 0 5px;
-        overflow: hidden;
-    }
-    .txt {
-        $color-primary: hsl(184, 75%, 38%);
-        font-size: 64px;
-        font-family: 'Kalam', cursive;
-        white-space: nowrap;
-        color: $color-primary;
-    }
-
-    @keyframes slider {
-        100% {
-            transform: translateX(-100%);
-        }
-
     }
 }
