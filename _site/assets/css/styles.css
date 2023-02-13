@@ -17,6 +17,7 @@ $breakpoint arguement choices:
   --color-aqua: #28AAAA;
   --color-aqua-slightly-light: #189FA8;
   --color-white: #FFFFFF;
+  --color-cream: #FFEFCB;
   --navbar-link-gap: 2rem;
   --navbar-link-gap-vertical: .2rem;
   --navbar-btn-height: 4rem;
@@ -82,6 +83,39 @@ body {
 
 .bg-transparent {
   background-color: transparent !important;
+}
+
+.cell {
+  width: 33%;
+  height: 350px;
+  margin: 0 15px;
+  overflow: hidden;
+  border-radius: 8px;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+.cell img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  vertical-align: middle;
+}
+.cell img:hover {
+  transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -moz-transform: scale(1.2); /* Firefox */
+  -webkit-transform: scale(1.2); /* Safari and Chrome */
+  -o-transform: scale(1.2); /* Opera */
+}
+
+.carousel-header {
+  text-align: center;
+  font-size: 3rem;
 }
 
 .navbar {
@@ -241,6 +275,10 @@ body {
   .section-best-sellers .best-seller-grid {
     margin-top: 0.5rem;
   }
+}
+
+.most-loved-item-content-rating-heart {
+  color: var(--color-cream);
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,20 @@
+.most-loved {
+    &-item {
+        
+        &-img {
+
+        }
+
+        &-content {
+            &-text {
+
+            }
+
+            &-rating {
+                &-heart {
+                    color: var(--color-cream);
+                }
+            }
+        }
+    }
+}
