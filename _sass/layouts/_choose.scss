@@ -1,7 +1,13 @@
 .section-choose {
+    background-color: lighten(pink, 8%);
+    border-radius: var(--choose-border-radius);
     animation: fadeIn $fade-animation-time;
+    padding-top: 2rem;
+    margin-top: var(--choose-header-margin-top);
+    padding-bottom: 4rem;
+
     &-header {
-        margin-top: var(--choose-header-margin-top);
+        margin-top: 0;
         margin-bottom: var(--choose-header-margin-bottom);
     }
 
@@ -42,7 +48,7 @@
                 }
 
                 &-info {
-                    background-color: var(--color-cream-light);    
+                    background-color: var(--color-cream);    
                     padding: 1rem 4rem;
                     border-radius: 0 0 var(--choose-border-radius) var(--choose-border-radius) ;
 
@@ -61,6 +67,7 @@
                         display:flex;
                         justify-content: center;
                         font-size: var(--choose-icon-size);
+                        margin-bottom: var(--choose-icon-gap);
 
                         i {
                             color: var(--color-dark-grey);

@@ -1,7 +1,9 @@
 .most-loved {
+    animation: fadeIn $fade-animation-time;
 
     &-header {
-        margin: var(--most-loved-header-margin) 0;
+        margin-top: $subheading-margin;
+        margin-bottom: var(--most-loved-header-margin);
     }
 
     &-carousel {
@@ -32,7 +34,7 @@
                 right: 50%;
                 transform:translateX(50%);
 
-                font-family: 'Ubuntu';
+                font-family: 'Ubuntu', 'sans-serif';
                 font-style: normal;
                 font-weight: 500;
                 font-size: var(--most-loved-text-size);
