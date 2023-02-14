@@ -1,3 +1,7 @@
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: default;
+}
+
 .cell {
     width: 33%;
     height: var(--carousel-cell-height);
@@ -5,24 +9,27 @@
     overflow: hidden;
     border-radius: 1.6rem;
     animation: fadeIn $fade-animation-time;
-  }
+    cursor: default;
   
-  .cell img {
+    img {
     width: 100%;
     height: var(--carousel-cell-height);
     object-fit: cover;
     transition: all 0.4s ease;
     vertical-align: middle;
+    cursor: inherit;
   
-    &:hover {
-      transform: scale(var(--image-scale-factor));
-      -ms-transform: scale(var(--image-scale-factor)); /* IE 9 */
-      -moz-transform: scale(var(--image-scale-factor)); /* Firefox */
-      -webkit-transform: scale(var(--image-scale-factor)); /* Safari and Chrome */
-      -o-transform: scale(var(--image-scale-factor)); /* Opera */
+      &:hover {
+        transform: scale(var(--image-scale-factor));
+        -ms-transform: scale(var(--image-scale-factor)); /* IE 9 */
+        -moz-transform: scale(var(--image-scale-factor)); /* Firefox */
+        -webkit-transform: scale(var(--image-scale-factor)); /* Safari and Chrome */
+        -o-transform: scale(var(--image-scale-factor)); /* Opera */
+      }
     }
   }
   
   .cell {
+    cursor: inherit;
     margin: 0 .3rem !important;
   }

@@ -12,8 +12,30 @@ toggleBtn.on("click", function () {
 var mostLovedCarousel = document.querySelector('.most-loved-carousel');
   var flkty = new Flickity( mostLovedCarousel, {
     // options
+    draggable: '>1',
+    freeScroll: true,
+    contain: true,
+    wrapAround: true,
     cellAlign: 'left',
-    contain: true
+    autoPlay: true,
+    autoPlay: 2000,
+    pauseAutoPlayOnHover: true,
+    fullscreen: true,
+    dragThreshold: 10,
+    freeScroll: true,
+    freeScrollFriction: 0.03,
+    accessibility: true,
+    prevNextButtons: true,
+    pageDots: true,
+    
+    // arrowShape: {
+    //   x0: 10,
+    //   x1: 60,
+    //   y1: 45,
+    //   x2: 80,
+    //   y2: 45,
+    //   x3: 30,
+    // }
   });
 
 // ***** SCROLL ANIMATION *****
