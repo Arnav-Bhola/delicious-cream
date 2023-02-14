@@ -382,7 +382,7 @@ p {
   border-radius: var(--best-seller-img-border-radius);
   box-shadow: 0 0 3rem #888888;
   z-index: 1;
-  animation: fadeIn 5s;
+  animation: fadeIn 2.5s;
   transition: all 0.4s ease;
 }
 .section-best-sellers .best-seller-grid-img-big:hover {
