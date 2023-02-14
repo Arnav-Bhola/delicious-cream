@@ -35,6 +35,7 @@
         font-family: 'Kalam', cursive;
         white-space: nowrap;
         color: $color-primary;
+
     }
 
     @keyframes slider {
@@ -42,5 +43,11 @@
             transform: translateX(-100%);
         }
 
+    }
+}
+
+@media (max-width: 768px) {
+    .sliderContainer { 
+        display: none;
     }
 }

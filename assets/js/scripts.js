@@ -7,9 +7,12 @@ toggleBtn.on("click", function () {
     navbarLinks.toggleClass("navbar-links-show");
 });
 
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 
-window.addEventListener("scroll", scrollAnimation);
+if(isMobile) {
+    window.addEventListener("scroll", scrollAnimation);
+}
 
 
 const imgContainer = document.querySelector('.heroImage').style
@@ -28,6 +31,6 @@ function scrollAnimation() {
     if (result < 60) {
         result = 60
     }
-    console.log(result);
+    // console.log(result);
     imgContainer.width = result + '%'
 }
