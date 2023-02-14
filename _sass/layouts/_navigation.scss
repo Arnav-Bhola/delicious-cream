@@ -4,13 +4,13 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 3rem;
-    z-index:100;
+    z-index: 100;
 
 
     &-logo {
         a:link, 
         a:visited {
-            font-family: 'Inter';
+            font-family: 'Inter', 'sans-serif';
             font-style: normal;
             font-weight: 900;
             font-size: var(--navbar-logo-font-size);
@@ -34,7 +34,7 @@
         a:link, 
         a:visited {
             text-align: center;
-            font-family: 'Ubuntu';
+            font-family: 'Ubuntu', 'sans-serif';
             font-style: normal;
             font-weight: 900;
             font-size: 1.6rem;
