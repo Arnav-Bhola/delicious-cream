@@ -10,11 +10,16 @@
 @import 'base/typography';
 @import 'base/utilities';
 
-@import 'layouts/header';
-@import 'layouts/footer';
+@import 'components/carousel';
+@import 'components/buttons';
+@import 'components/slider';
+
 @import 'layouts/navigation';
 @import 'layouts/hero';
 @import 'layouts/best-sellers';
+@import 'layouts/most-loved';
+@import 'layouts/choose';
+@import 'layouts/footer';
 
 @import 'pages/home';
 

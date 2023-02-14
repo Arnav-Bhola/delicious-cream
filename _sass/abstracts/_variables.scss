@@ -3,6 +3,10 @@
     --color-aqua: #28AAAA;
     --color-aqua-slightly-light: #189FA8;
     --color-white: #FFFFFF;
+    --color-cream: #FFEFCB;
+    --color-cream-light: #fbf0d6;
+    --color-black: #000000;
+    --color-dark-grey: #6D7D8B;
 
     // ***** NAVBAR *****
     --navbar-link-gap: 2rem;
@@ -23,8 +27,28 @@
     // ***** BEST SELLERS *****
     --best-seller-heading-font-size: 3.6rem;
     --best-seller-grid-gap: 3rem;
-    --best-seller-img-border-radius: 2rem;
+    --best-seller-img-border-radius: 5rem;
     @media only screen and (max-width: 62.5em) {
         --best-seller-heading-font-size: 2.7rem;
     };
+
+    // ***** MOST LOVED *****
+    --most-loved-icon-size: 3rem;
+    --most-loved-text-size: 1.4rem;
+    --most-loved-header-margin: 4rem;
+    --most-loved-icon-gap: 1rem;
+    --most-loved-icon-box-margin: .7rem;
+
+    // ***** CAROUSEL *****
+    --carousel-cell-height: 35rem;
+
+    // ***** CHOOSE *****
+    --choose-header-margin-top: 5.5rem;
+    --choose-header-margin-bottom: 4rem;
+    --choose-grid-gap: 5rem;
+    --choose-border-radius: 3rem;
+    --choose-font-size: 1.6rem;
+    --choose-icon-size: 2rem;
+    --choose-line-height: 2rem;
+    --choose-icon-gap: .6rem;
 }

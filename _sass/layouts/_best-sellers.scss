@@ -1,14 +1,4 @@
 .section-best-sellers {
-    h2 {
-        color: var(--color-aqua-slightly-light);
-        font-family: 'Kalam';
-        font-style: normal;
-        font-weight: 700;
-        font-size: var(--best-seller-heading-font-size);
-        line-height: 57px;
-        text-align: center;
-    }
-
     .best-seller-grid {
         display: flex;
         justify-content: center;
@@ -19,6 +9,13 @@
         &-img-big {
             border-radius: var(--best-seller-img-border-radius);
             @include imgBoxShadow;
+            z-index: 1;
+            animation: fadeIn 5s;
+            transition: all 0.4s ease;
+        
+            &:hover {
+            transform: scale(1.2);
+            }
         }
         
 
@@ -31,19 +28,28 @@
                 width: 100%;   
                 height: 100%;
                 @include imgBoxShadow; 
+                overflow: hidden;
+                animation: fadeIn 5s;
+                object-fit: cover;  
+                transition: all 0.4s ease;
+                z-index: 10;
+            
+                &:hover {
+                transform: scale(1.2);
+                }
             }
 
             &-img-1 {
-                border-radius: var(--best-seller-img-border-radius) 0px 0px 0px;
+                border-radius: var(--best-seller-img-border-radius) 0 0 0;
             }
             &-img-2 {
-                border-radius: 0px var(--best-seller-img-border-radius) 0px 0px;
+                border-radius: 0 var(--best-seller-img-border-radius) 0 0;
             }
             &-img-3 {
-                border-radius: 0px 0px 0px var(--best-seller-img-border-radius);
+                border-radius: 0 0 0 var(--best-seller-img-border-radius);
             }
             &-img-4 {
-                border-radius: 0px 0px var(--best-seller-img-border-radius) 0px;
+                border-radius: 0 0 var(--best-seller-img-border-radius) 0;
             }
         }
 

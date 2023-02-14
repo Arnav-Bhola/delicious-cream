@@ -1,7 +1,3 @@
-._config.yml
-_config.yml
-*._config.yml
-
 # Logs
 logs
 *.log
@@ -107,6 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
-
 # _site folder should be ignore
-_site/*
+_site/
