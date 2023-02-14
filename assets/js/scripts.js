@@ -7,10 +7,10 @@ toggleBtn.on("click", function () {
     navbarLinks.toggleClass("navbar-links-show");
 });
 
+
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-
-if(isMobile) {
+if(!isMobile) {
     window.addEventListener("scroll", scrollAnimation);
 }
 
@@ -31,6 +31,5 @@ function scrollAnimation() {
     if (result < 60) {
         result = 60
     }
-    // console.log(result);
     imgContainer.width = result + '%'
 }
