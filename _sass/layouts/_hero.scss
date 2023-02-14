@@ -1,5 +1,6 @@
 // main hero
 #hero {
+    animation: fadeIn $fade-animation-time;
     width: 99vw;
     position: relative;
     top: -2vw;

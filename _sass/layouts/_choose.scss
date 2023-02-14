@@ -1,4 +1,5 @@
 .section-choose {
+    animation: fadeIn $fade-animation-time;
     &-header {
         margin-top: var(--choose-header-margin-top);
         margin-bottom: var(--choose-header-margin-bottom);
@@ -22,15 +23,27 @@
             &-front {
                 border-radius: var(--choose-border-radius);
                 text-align: center;
+                overflow: hidden;
 
                 &-img {
-                    width:100%;
+                    overflow: hidden;
+                    width: 100%;
                     border-radius: var(--choose-border-radius)  var(--choose-border-radius) 0 0;
+                    
+                    &-image {
+                        width: 100%;
+                        border-radius: var(--choose-border-radius)  var(--choose-border-radius) 0 0;
+                        transition: all 0.4s ease;
+
+                        &:hover {
+                            transform: scale(var(--image-scale-factor));
+                        }
+                    }
                 }
 
                 &-info {
                     background-color: var(--color-cream-light);    
-                    padding:1rem 4rem;
+                    padding: 1rem 4rem;
                     border-radius: 0 0 var(--choose-border-radius) var(--choose-border-radius) ;
 
                     &-text {

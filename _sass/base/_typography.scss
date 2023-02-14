@@ -12,6 +12,7 @@ h2 {
     font-size: var(--best-seller-heading-font-size);
     line-height: 5.7rem;
     text-align: center;
+    animation: fadeIn $fade-animation-time;
 }
 
 h3,
@@ -19,9 +20,5 @@ h4,
 p {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
-    font-size: 2rem;
-}
-
-p {
     font-size: 2rem;
 }

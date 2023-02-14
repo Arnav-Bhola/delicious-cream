@@ -42,6 +42,9 @@
     // ***** CAROUSEL *****
     --carousel-cell-height: 35rem;
 
+    // ***** IMAGE SCALING *****
+    --image-scale-factor: 1.2;
+
     // ***** CHOOSE *****
     --choose-header-margin-top: 5.5rem;
     --choose-header-margin-bottom: 4rem;
@@ -52,3 +55,6 @@
     --choose-line-height: 2rem;
     --choose-icon-gap: .6rem;
 }
+
+// ***** SASS VARIABLES *****
+$fade-animation-time: 2.5s;
