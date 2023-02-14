@@ -138,6 +138,10 @@ p {
   background-color: transparent !important;
 }
 
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: default;
+}
+
 .cell {
   width: 33%;
   height: var(--carousel-cell-height);
@@ -145,14 +149,15 @@ p {
   overflow: hidden;
   border-radius: 1.6rem;
   animation: fadeIn 2.3s;
+  cursor: default;
 }
-
 .cell img {
   width: 100%;
   height: var(--carousel-cell-height);
   object-fit: cover;
   transition: all 0.4s ease;
   vertical-align: middle;
+  cursor: inherit;
 }
 .cell img:hover {
   transform: scale(var(--image-scale-factor));
@@ -163,6 +168,7 @@ p {
 }
 
 .cell {
+  cursor: inherit;
   margin: 0 0.3rem !important;
 }
 
@@ -451,6 +457,9 @@ p {
 .most-loved-header {
   margin-top: 8rem;
   margin-bottom: var(--most-loved-header-margin);
+}
+.most-loved-carousel {
+  cursor: pointer;
 }
 .most-loved-carousel-rating {
   position: absolute;
