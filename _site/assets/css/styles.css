@@ -18,6 +18,7 @@ $breakpoint arguement choices:
   --color-aqua-slightly-light: #189FA8;
   --color-white: #FFFFFF;
   --color-cream: #FFEFCB;
+  --color-cream-contrast: #fdbb6a;
   --color-black: #000000;
   --color-dark-grey: #53606b;
   --navbar-link-gap: 2rem;
@@ -101,7 +102,7 @@ body {
 
 ::selection {
   background-color: var(--color-aqua);
-  color: var(--color-white);
+  color: #ffe9ed;
 }
 
 h1 {
@@ -536,7 +537,7 @@ p {
   transform: scale(var(--image-scale-factor));
 }
 .section-choose-grid-cell-front-info {
-  background-color: var(--color-cream);
+  background-color: var(--color-cream-contrast);
   padding: 1rem 4rem;
   border-radius: 0 0 var(--choose-border-radius) var(--choose-border-radius);
 }
@@ -589,7 +590,7 @@ p {
   overflow: hidden;
   z-index: 2;
   position: relative;
-  padding: 2rem 7rem;
+  margin-right: 2rem 7rem;
   border-radius: var(--delicious-img-border-radius);
 }
 #delicious .flexContainer .imgContainer img {
