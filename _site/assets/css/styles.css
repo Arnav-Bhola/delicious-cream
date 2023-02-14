@@ -35,6 +35,7 @@ $breakpoint arguement choices:
   --most-loved-icon-gap: 1rem;
   --most-loved-icon-box-margin: .7rem;
   --carousel-cell-height: 35rem;
+  --image-scale-factor: 1.2;
   --choose-header-margin-top: 5.5rem;
   --choose-header-margin-bottom: 4rem;
   --choose-grid-gap: 5rem;
@@ -117,6 +118,7 @@ h2 {
   font-size: var(--best-seller-heading-font-size);
   line-height: 5.7rem;
   text-align: center;
+  animation: fadeIn 2.5s;
 }
 
 h3,
@@ -124,10 +126,6 @@ h4,
 p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
-}
-
-p {
   font-size: 2rem;
 }
 
@@ -141,22 +139,22 @@ p {
   margin: 0 1.5rem;
   overflow: hidden;
   border-radius: 1.6rem;
-  animation: fadeIn 5s;
+  animation: fadeIn 2.5s;
 }
 
 .cell img {
   width: 100%;
-  height: 35rem;
+  height: var(--carousel-cell-height);
   object-fit: cover;
   transition: all 0.4s ease;
   vertical-align: middle;
 }
 .cell img:hover {
-  transform: scale(1.2);
-  -ms-transform: scale(1.2); /* IE 9 */
-  -moz-transform: scale(1.2); /* Firefox */
-  -webkit-transform: scale(1.2); /* Safari and Chrome */
-  -o-transform: scale(1.2); /* Opera */
+  transform: scale(var(--image-scale-factor));
+  -ms-transform: scale(var(--image-scale-factor)); /* IE 9 */
+  -moz-transform: scale(var(--image-scale-factor)); /* Firefox */
+  -webkit-transform: scale(var(--image-scale-factor)); /* Safari and Chrome */
+  -o-transform: scale(var(--image-scale-factor)); /* Opera */
 }
 
 .cell {
@@ -221,6 +219,7 @@ p {
 }
 
 .navbar {
+  animation: fadeIn 2.5s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -318,6 +317,7 @@ p {
   }
 }
 #hero {
+  animation: fadeIn 2.5s;
   width: 99vw;
   position: relative;
   top: -2vw;
@@ -473,6 +473,9 @@ p {
   line-height: 1.8rem;
 }
 
+.section-choose {
+  animation: fadeIn 2.5s;
+}
 .section-choose-header {
   margin-top: var(--choose-header-margin-top);
   margin-bottom: var(--choose-header-margin-bottom);
@@ -494,10 +497,20 @@ p {
 .section-choose-grid-cell-front {
   border-radius: var(--choose-border-radius);
   text-align: center;
+  overflow: hidden;
 }
 .section-choose-grid-cell-front-img {
+  overflow: hidden;
   width: 100%;
   border-radius: var(--choose-border-radius) var(--choose-border-radius) 0 0;
+}
+.section-choose-grid-cell-front-img-image {
+  width: 100%;
+  border-radius: var(--choose-border-radius) var(--choose-border-radius) 0 0;
+  transition: all 0.4s ease;
+}
+.section-choose-grid-cell-front-img-image:hover {
+  transform: scale(var(--image-scale-factor));
 }
 .section-choose-grid-cell-front-info {
   background-color: var(--color-cream-light);
