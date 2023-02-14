@@ -1,7 +1,7 @@
 .sliderWrapper {
     position: sticky;
-    bottom: 100px;
-    padding-bottom: 20px;
+    bottom: 10rem;
+    padding-bottom: 2rem;
 
     z-index: -10;
     overflow: hidden;
@@ -11,7 +11,7 @@
 
 .sliderContainer {
     display: flex;
-    margin: 100px auto;
+    margin: 10rem auto;
     rotate: -8.2deg;
     width: 120%;
 
@@ -21,13 +21,13 @@
     }
 
     .slide {
-        margin: 0 5px;
+        margin: 0 .5rem;
         overflow: hidden;
     }
 
     .txt {
         $color-primary: hsl(184, 75%, 38%);
-        font-size: 64px;
+        font-size: 6.4rem;
         font-family: 'Kalam', cursive;
         white-space: nowrap;
         color: $color-primary;

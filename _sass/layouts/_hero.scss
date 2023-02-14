@@ -15,14 +15,14 @@
     --color-primary-lightness: 50%;
 
     position: relative;
-    min-height: 1200px;
+    min-height: 120rem;
     // background-color: aquamarine;
 
     .heroImage {
         position: sticky;
-        top: 0px;
+        top: 0;
         margin: auto;
-        height: 800px;
+        height: 80rem;
         width: 100%;
         background-image: url('../../assets/images/hero.jpg');
         background-repeat: no-repeat;
@@ -33,63 +33,33 @@
 
     .content {
         position: sticky;
-        bottom: 40px;
+        bottom: 4rem;
 
-        margin-left: 230px;
-        padding: 30px;
+        margin-left: 23rem;
+        padding: 3rem;
         color: var(--color-primary);
         overflow: hidden;
         display: inline-block;
-        width: 500px;
+        width: 50rem;
 
         h1 {
-            max-width: 407px;
-            @include textShadow(5px, hsl(0, 0%, 45%));
+            max-width: 40.7rem;
+            @include textShadow(.5rem, hsl(0, 0%, 45%));
         }
 
         h3 {
-            @include textShadow(8px, hsl(0, 0%, 45%));
+            @include textShadow(.8rem, hsl(0, 0%, 45%));
 
         }
 
         .cta-btn {
-            margin-top: 30px;
+            margin-top: 3rem;
 
-        }
-
-        button {
-            padding: 10px 30px;
-            border-radius: 30px;
-            color: var(--color-primary);
-            font-weight: 400;
-            font-size: toRem(16);
-            background-color: transparent;
-            border: none;
-            box-shadow: 1px 1px 3px 1px hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness));
-        }
-
-        button:hover {
-            background-color: var(--color-primary);
-            color: #eee;
-
-        }
-
-        button:nth-child(2) {
-            --color-primary-lightness: 30%;
-            margin: 0 10px;
-            background-color: var(--color-primary);
-            color: #eee;
-
-            &:hover {
-                --color-primary-lightness: 50%;
-                background-color: transparent;
-                color: var(--color-primary);
-            }
         }
 
     }
 
-    @media(max-width: 768px) {
+    @media(max-width: 48em) {
 
         .content {
             bottom: 35vh;

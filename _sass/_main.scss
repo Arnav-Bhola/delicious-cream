@@ -11,12 +11,14 @@
 @import 'base/utilities';
 
 @import 'components/carousel';
+@import 'components/buttons';
 @import 'components/slider';
 
-@import 'layouts/hero';
-@import 'layouts/footer';
 @import 'layouts/navigation';
+@import 'layouts/hero';
 @import 'layouts/best-sellers';
 @import 'layouts/most-loved';
+@import 'layouts/choose';
+@import 'layouts/footer';
 
 @import 'pages/home';
