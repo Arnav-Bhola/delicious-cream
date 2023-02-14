@@ -6,7 +6,12 @@ h1 {
     font-size: toRem(64);
 }
 
-h3,
+h2,h3 {
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+    font-size: toRem(24);
+}
+
 h4,
 p {
     font-family: 'Ubuntu', sans-serif;

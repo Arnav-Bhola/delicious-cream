@@ -1,0 +1,100 @@
+#delicious {
+
+    margin-top: 50px;
+
+    .flexContainer {
+        display: flex;
+        margin: 10px;
+
+        div {
+            flex: 1;
+        }
+
+        .txt {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+
+            h3,
+            p {
+
+                width: 70%;
+            }
+        }
+
+        .imgContainer {
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 2;
+            position: relative;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .imgContainer::before,
+        .imgContainer::after {
+            content: "";
+            z-index: 3;
+            width: 100%;
+            height: 50%;
+            background-color: #ffffff;
+            position: absolute;
+            top: 0;
+            transition: transform 0.5s ease-in-out;
+            display: block;
+            object-fit: cover;
+        }
+
+        .imgContainer::after {
+            top: 50%;
+        }
+
+    }
+
+    .flexContainer:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .flexContainer:nth-child(odd).show .imgContainer::before {
+        transform: translateX(100%);
+    }
+
+    .flexContainer:nth-child(even).show .imgContainer::before {
+        transform: translateX(-100%);
+    }
+
+    .flexContainer:nth-child(odd).show .imgContainer::after {
+        transform: translateX(-100%);
+    }
+
+    .flexContainer:nth-child(even).show .imgContainer::after {
+        transform: translateX(100%);
+    }
+
+    @media(max-width: 768px) {
+        .flexContainer:nth-child(odd),.flexContainer {
+            border: 4px solid #333;
+            border-radius: 8px;;
+            flex-direction: column-reverse;
+            padding: 5px;
+
+            .txt {
+                width: 90%;
+                margin: auto;
+
+            }
+            .imgContainer {
+                width: 70%;
+                margin: auto;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+        }
+         
+    }
+}

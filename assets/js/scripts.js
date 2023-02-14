@@ -16,6 +16,7 @@ var mostLovedCarousel = document.querySelector('.most-loved-carousel');
   });
 
 
+// scroll animation
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 if(!isMobile) {
@@ -40,3 +41,25 @@ function scrollAnimation() {
     }
     imgContainer.width = result + '%'
 }
+
+// intersection observer
+const intersectionContainer = document.querySelectorAll('#delicious .flexContainer');
+
+const options = {
+  root: null,
+  threshold: 0.5,
+  rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver(items => {
+  items.forEach(item => {
+    if (item.isIntersecting) {
+      item.target.classList.add('show');
+      observer.unobserve(item.target);
+    }
+  });
+}, options);
+
+intersectionContainer.forEach(item => {
+  observer.observe(item);
+});
