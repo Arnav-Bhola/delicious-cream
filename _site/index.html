@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Creams!</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <base href="https://arnav-bhola.github.io/delicious-cream/">
     
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
@@ -12,6 +13,12 @@
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
@@ -21,21 +28,57 @@
     <div class="navbar-logo"><a href="#">Delicious Creams</a></div>
     <button id="toggle-nav" class="navbar-toggler" aria-label="Toggle Navbar"><span class="navbar-toggler-icon"></span></button>
     <div class="navbar-links">
-        <div class="navbar-btn"><a href="#">Variety</a></div>
+        <div class="navbar-btn"><a class="btn" href="#">Variety</a></div>
         <div class="navbar-btn"><a href="#">Special</a></div>
         <div class="navbar-btn"><a href="#">Orders</a></div>
         <div class="navbar-btn navbar-btn-filled"><a href="#">Buy</a></div>
     </div>
 </nav>
-        <div class="section-best-sellers">
+        <section id="hero">
+    <div class="hero">
+        <div class="heroImage"></div>
+        <div class="container content">
+            <h1>ALL FOR THE SWEET TOOTH</h1>
+            <h3>Explore all flavors</h3>
+            <div class="cta-btn">
+                <button class="btn">Explore</button>
+                <button class="btn btn-filled">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="sliderWrapper">
+        <div class="sliderContainer">
+            <div class='slider'>
+                <div class='slide'>
+                    <div class="txt">Everything is sweeter and more colorful with sprinkles on top.</div>
+                </div>
+            </div>
+            <div class='slider'>
+                <div class='slide'>
+                    <div class="txt">Everything is sweeter and more colorful with sprinkles on top.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sliderWrapper" style="bottom: 0px">
+        <div class="sliderContainer">
+            <div class='slider'>
+                <div class='slide'>
+                    <div class="txt">A little lick of frozen cream every now and then, goes a long, long way.</div>
+                </div>
+            </div>
+            <div class='slider'>
+                <div class='slide'></div></div></div></div></section>
+             
+<div class="section-best-sellers">
     <h2>Best Sellers</h2>
     <div class="best-seller-grid">
-        <img src="assets/imgs/best-seller-1.png" alt="Picture of Ice Cream" class="best-seller-grid-img-big">
+        <img src="assets/images/best-seller-1.png" alt="Picture of Ice Cream" class="best-seller-grid-img-big">
         <div class="best-seller-grid-small">
-            <img src="assets/imgs/best-seller-2.png" alt="Picture of Ice Cream" class="best-seller-grid-small-img-1">
-            <img src="assets/imgs/best-seller-3.png" alt="Picture of Ice Cream" class="best-seller-grid-small-img-2">
-            <img src="assets/imgs/best-seller-4.png" alt="Picture of Ice Cream" class="best-seller-grid-small-img-3">
-            <img src="assets/imgs/best-seller-5.png" alt="Picture of Ice Cream" class="best-seller-grid-small-img-4">
+            <img src="assets/images/best-seller-2.png" alt="Picture of Ice Cream" class="best-seller-grid-small-img-1">
+            <img src="assets/images/best-seller-3.png" alt="Picture of Ice Cream" class="best-seller-grid-small-img-2">
+            <img src="assets/images/best-seller-4.png" alt="Picture of Ice Cream" class="best-seller-grid-small-img-3">
+            <img src="assets/images/best-seller-5.png" alt="Picture of Ice Cream" class="best-seller-grid-small-img-4">
         </div>
     </div>
 </div>
@@ -43,7 +86,7 @@
     <h2 class="most-loved-header">Most Loved</h2>
     <div class="most-loved-carousel">
         <div class="cell">
-            <img src="assets/imgs/most-loved-1.png" alt="">
+            <img src="assets/images/most-loved-1.png" alt="">
             <p class="most-loved-carousel-text">It is a long established fact that a reader will be distracted by the</p>
             <div class="most-loved-carousel-rating">
                 <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i>
@@ -51,7 +94,7 @@
         </div>
         
         <div class="cell">
-            <img src="assets/imgs/most-loved-2.png" alt="">
+            <img src="assets/images/most-loved-2.png" alt="">
             <p class="most-loved-carousel-text">It is a long established fact that a reader will be distracted by the</p>
             <div class="most-loved-carousel-rating">
                 <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i>
@@ -59,7 +102,7 @@
         </div>
 
         <div class="cell">
-            <img src="assets/imgs/most-loved-3.png" alt="">
+            <img src="assets/images/most-loved-3.png" alt="">
             <p class="most-loved-carousel-text">It is a long established fact that a reader will be distracted by the</p>
             <div class="most-loved-carousel-rating">
                 <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i>
@@ -67,7 +110,7 @@
         </div>
 
         <div class="cell">
-            <img src="assets/imgs/most-loved-1.png" alt="">
+            <img src="assets/images/most-loved-1.png" alt="">
             <p class="most-loved-carousel-text">It is a long established fact that a reader will be distracted by the</p>
             <div class="most-loved-carousel-rating">
                 <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i>
@@ -75,7 +118,7 @@
         </div>
 
         <div class="cell">
-            <img src="assets/imgs/most-loved-1.png" alt="">
+            <img src="assets/images/most-loved-1.png" alt="">
             <p class="most-loved-carousel-text">It is a long established fact that a reader will be distracted by the</p>
             <div class="most-loved-carousel-rating">
                 <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i>
@@ -83,7 +126,7 @@
         </div>
 
         <div class="cell">
-            <img src="assets/imgs/most-loved-1.png" alt="">
+            <img src="assets/images/most-loved-1.png" alt="">
             <p class="most-loved-carousel-text">It is a long established fact that a reader will be distracted by the</p>
             <div class="most-loved-carousel-rating">
                 <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i>
@@ -91,8 +134,95 @@
         </div>
     </div>
 </div>
-<br>
-<br>
+<section class="section-choose">
+    <h2 class="section-choose-header">Choose</h2>
+    <div class="section-choose-grid">
+        <div class="section-choose-grid-cell-front">
+            <img src="assets/images/most-loved-1.png" alt="Picture of Ice Cream" class="section-choose-grid-cell-front-img">
+            <div class="section-choose-grid-cell-front-info">
+                <p class="section-choose-grid-cell-front-info-text">It is a long established fact that a reader will be distracted by the</p>
+                <div class="section-choose-grid-cell-front-info-rating">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+            <div class="section-choose-grid-cell-back"></div>
+        </div>
+        <div class="section-choose-grid-cell-front">
+            <img src="assets/images/most-loved-2.png" alt="Picture of Ice Cream" class="section-choose-grid-cell-front-img">
+            <div class="section-choose-grid-cell-front-info">
+                <p class="section-choose-grid-cell-front-info-text">It is a long established fact that a reader will be distracted by the</p>
+                <div class="section-choose-grid-cell-front-info-rating">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+            <div class="section-choose-grid-cell-back"></div>
+        </div>
+        <div class="section-choose-grid-cell-front">
+            <img src="assets/images/most-loved-3.png" alt="Picture of Ice Cream" class="section-choose-grid-cell-front-img">
+            <div class="section-choose-grid-cell-front-info">
+                <p class="section-choose-grid-cell-front-info-text">It is a long established fact that a reader will be distracted by the</p>
+                <div class="section-choose-grid-cell-front-info-rating"><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="section-choose-grid-cell-back"></div>
+        </div>
+        <div class="section-choose-grid-cell-front">
+            <img src="assets/images/most-loved-1.png" alt="Picture of Ice Cream" class="section-choose-grid-cell-front-img">
+            <div class="section-choose-grid-cell-front-info">
+                <p class="section-choose-grid-cell-front-info-text">It is a long established fact that a reader will be distracted by the</p>
+                <div class="section-choose-grid-cell-front-info-rating"><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="section-choose-grid-cell-back"></div>
+        </div>
+        <div class="section-choose-grid-cell-front">
+            <img src="assets/images/most-loved-2.png" alt="Picture of Ice Cream" class="section-choose-grid-cell-front-img">
+            <div class="section-choose-grid-cell-front-info">
+                <p class="section-choose-grid-cell-front-info-text">It is a long established fact that a reader will be distracted by the</p>
+                <div class="section-choose-grid-cell-front-info-rating"><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="section-choose-grid-cell-back"></div>
+        </div>
+        <div class="section-choose-grid-cell-front">
+            <img src="assets/images/most-loved-3.png" alt="Picture of Ice Cream" class="section-choose-grid-cell-front-img">
+            <div class="section-choose-grid-cell-front-info">
+                <p class="section-choose-grid-cell-front-info-text">It is a long established fact that a reader will be distracted by the</p>
+                <div class="section-choose-grid-cell-front-info-rating"><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="section-choose-grid-cell-back"></div>
+        </div>
+        <div class="section-choose-grid-cell-front">
+            <img src="assets/images/most-loved-1.png" alt="Picture of Ice Cream" class="section-choose-grid-cell-front-img">
+            <div class="section-choose-grid-cell-front-info">
+                <p class="section-choose-grid-cell-front-info-text">It is a long established fact that a reader will be distracted by the</p>
+                <div class="section-choose-grid-cell-front-info-rating"><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="section-choose-grid-cell-back"></div>
+        </div>
+        <div class="section-choose-grid-cell-front">
+            <img src="assets/images/most-loved-2.png" alt="Picture of Ice Cream" class="section-choose-grid-cell-front-img">
+            <div class="section-choose-grid-cell-front-info">
+                <p class="section-choose-grid-cell-front-info-text">It is a long established fact that a reader will be distracted by the</p>
+                <div class="section-choose-grid-cell-front-info-rating"><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="section-choose-grid-cell-back"></div>
+        </div>
+        <div class="section-choose-grid-cell-front">
+            <img src="assets/images/most-loved-3.png" alt="Picture of Ice Cream" class="section-choose-grid-cell-front-img">
+            <div class="section-choose-grid-cell-front-info">
+                <p class="section-choose-grid-cell-front-info-text">It is a long established fact that a reader will be distracted by the</p>
+                <div class="section-choose-grid-cell-front-info-rating"><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="section-choose-grid-cell-back"></div>
+        </div>
+    </div>
+</section>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
     

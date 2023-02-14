@@ -1,7 +1,7 @@
 .most-loved {
 
     &-header {
-        margin: 4rem 0;
+        margin: var(--most-loved-header-margin) 0;
     }
 
     &-carousel {
