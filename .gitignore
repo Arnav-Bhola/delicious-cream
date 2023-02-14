@@ -109,4 +109,4 @@ dist
 
 
 # _site folder should be ignore
-_site/
+_site/*
