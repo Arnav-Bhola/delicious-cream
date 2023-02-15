@@ -44,6 +44,7 @@
         width: 50rem;
 
         h1 {
+            text-transform: uppercase;
             max-width: 40.7rem;
             @include textShadow(.5rem, hsl(0, 0%, 45%));
         }
