@@ -1,9 +1,10 @@
-#delicious {
+.delicious {
     animation: fadeIn $fade-animation-time;
 
     margin-top: -2rem;
 
     .flexContainer {
+        z-index: 7;
         display: flex;
         margin: 10px;
 
@@ -16,7 +17,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            z-index: 5;
             font-family: 'Inter', 'sans-serif';
 
             h3,
@@ -32,7 +32,6 @@
 
         .imgContainer {
             overflow: hidden;
-            z-index: 2;
             position: relative;
             margin-right: 2rem 7rem;
             border-radius: var(--delicious-img-border-radius);
@@ -41,9 +40,10 @@
                 border-radius: var(--delicious-img-border-radius);
                 width: 100%;
                 object-fit: cover;
-                z-index: 1000;
+                z-index: 10;
                 position: relative;
                 transition: all .4s ease;
+                cursor:pointer;
                 
                 &:hover {
                     transform: scale(var(--image-scale-factor))

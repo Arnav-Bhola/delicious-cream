@@ -28,6 +28,10 @@ body {
     box-sizing: border-box;
 }
 
+nav, section {
+    position:relative;
+}
+
 ::selection {
     background-color: var(--color-aqua);
     color: lighten(pink, 8%);

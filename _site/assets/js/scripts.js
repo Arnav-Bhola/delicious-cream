@@ -18,7 +18,7 @@ var mostLovedCarousel = document.querySelector('.most-loved-carousel');
     wrapAround: true,
     cellAlign: 'left',
     autoPlay: true,
-    autoPlay: 2000,
+    autoPlay: 5000,
     pauseAutoPlayOnHover: true,
     fullscreen: true,
     dragThreshold: 10,
@@ -87,3 +87,15 @@ const observer = new IntersectionObserver(items => {
 intersectionContainer.forEach(item => {
   observer.observe(item);
 });
+
+
+// ***** PARTICLES / SPRINKLES *****
+var particles_settings = "assets/js/particles.json"
+var particles_duplicity = ['particles1', 'particles2', 'particles4', 'particles5']
+    
+particles_duplicity.forEach(function(element) {
+  console.log(element);
+  particlesJS.load(element, particles_settings, function () {
+    console.log("callback - particles.js config loaded");
+  })
+})

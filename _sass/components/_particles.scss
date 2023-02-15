@@ -1,0 +1,11 @@
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+@media(min-width: 93.75em) {
+    .particles-js-canvas-el {
+        display: none !important;
+    }
+}

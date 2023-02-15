@@ -1,5 +1,5 @@
 // main hero
-#hero {
+section.hero {
     animation: fadeIn $fade-animation-time;
     width: 99vw;
     position: relative;
@@ -8,7 +8,7 @@
     transform: translate(-50%);
 }
 
-.hero {
+div.hero {
     // colors. using css variable due to some limitations with scss variables
     --color-primary: hsl(184, 75%, 38%);
     --color-primary-hue: 184;
