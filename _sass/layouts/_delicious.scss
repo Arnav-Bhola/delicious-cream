@@ -1,7 +1,7 @@
 #delicious {
     animation: fadeIn $fade-animation-time;
 
-    margin-top: -1rem;
+    margin-top: -2rem;
 
     .flexContainer {
         display: flex;
@@ -17,10 +17,16 @@
             align-items: center;
             justify-content: center;
             z-index: 5;
+            font-family: 'Inter', 'sans-serif';
 
             h3,
             p {
                 width: 70%;
+            }
+
+            h3 {
+                font-style: italic;
+                font-weight: bold;
             }
         }
 
@@ -96,6 +102,10 @@
                 width: 90%;
                 margin: auto;
 
+                p {
+                    font-style: italic;
+                }
+
             }
             .imgContainer {
                 width: 70%;
@@ -110,4 +120,6 @@
 
 .delicious-header {
     margin-top: $subheading-margin;
+    
+    margin-bottom: 3rem;
 }

@@ -368,6 +368,7 @@ p {
   width: 50rem;
 }
 .hero .content h1 {
+  text-transform: uppercase;
   max-width: 40.7rem;
   text-shadow: 3px 2px 0.5rem hsl(0deg, 0%, 45%);
 }
@@ -566,7 +567,7 @@ p {
 
 #delicious {
   animation: fadeIn 2.3s;
-  margin-top: -1rem;
+  margin-top: -2rem;
 }
 #delicious .flexContainer {
   display: flex;
@@ -581,10 +582,15 @@ p {
   align-items: center;
   justify-content: center;
   z-index: 5;
+  font-family: "Inter", "sans-serif";
 }
 #delicious .flexContainer .txt h3,
 #delicious .flexContainer .txt p {
   width: 70%;
+}
+#delicious .flexContainer .txt h3 {
+  font-style: italic;
+  font-weight: bold;
 }
 #delicious .flexContainer .imgContainer {
   overflow: hidden;
@@ -646,6 +652,9 @@ p {
     width: 90%;
     margin: auto;
   }
+  #delicious .flexContainer:nth-child(odd) .txt p, #delicious .flexContainer .txt p {
+    font-style: italic;
+  }
   #delicious .flexContainer:nth-child(odd) .imgContainer, #delicious .flexContainer .imgContainer {
     width: 70%;
     margin: auto;
@@ -656,6 +665,7 @@ p {
 
 .delicious-header {
   margin-top: 8rem;
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
