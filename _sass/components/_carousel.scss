@@ -1,5 +1,10 @@
 .flickity-enabled.is-draggable .flickity-viewport {
+  z-index: 10;
   cursor: default;
+}
+
+.flickity-button {
+  z-index: 12;
 }
 
 .cell {

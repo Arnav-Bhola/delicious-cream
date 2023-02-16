@@ -1,4 +1,5 @@
 .section-choose {
+    z-index:7;
     background-color: lighten(pink, 8%);
     border-radius: var(--choose-border-radius);
     animation: fadeIn $fade-animation-time;
@@ -27,6 +28,8 @@
             }
 
             &-front {
+                cursor:pointer;
+                z-index: 7;
                 border-radius: var(--choose-border-radius);
                 text-align: center;
                 overflow: hidden;
@@ -71,9 +74,15 @@
 
                         i {
                             color: var(--color-dark-grey);
+                            transform: scale(1);
+                            
 
                             &:not(:last-child) {
                                 margin-right: var(--choose-icon-gap);
+                            }
+
+                            &:hover {
+                                animation: pulsate 0.85s infinite;
                             }
                         }
                     }
