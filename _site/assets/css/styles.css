@@ -193,17 +193,16 @@ p {
   margin: 0 0.3rem !important;
 }
 
-.particles-js-canvas-el {
-  position: absolute;
+canvas.particles {
+  width: 100%;
+  height: 100%;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 5;
+  animation: fadeIn 2.3s;
 }
 
-@media (min-width: 93.75em) {
-  .particles-js-canvas-el {
-    display: none !important;
-  }
-}
 .btn {
   padding: 1rem 3rem;
   border-radius: 3rem;
@@ -360,6 +359,7 @@ p {
   }
 }
 section.hero {
+  z-index: 7;
   animation: fadeIn 2.3s;
   width: 99vw;
   position: relative;
@@ -369,6 +369,7 @@ section.hero {
 }
 
 div.hero {
+  z-index: 7;
   --color-primary: hsl(184, 75%, 38%);
   --color-primary-hue: 184;
   --color-primary-saturation: 75%;
@@ -416,6 +417,9 @@ div.hero .content .cta-btn {
   }
 }
 
+.section-best-sellers {
+  z-index: 7;
+}
 .section-best-sellers .best-seller-grid {
   display: flex;
   justify-content: center;
@@ -425,7 +429,7 @@ div.hero .content .cta-btn {
 .section-best-sellers .best-seller-grid-img-big {
   border-radius: var(--best-seller-img-border-radius);
   box-shadow: 0 0 3rem #888888;
-  z-index: 1;
+  z-index: 6;
   animation: fadeIn 2.3s;
   transition: all 0.4s ease;
 }
@@ -485,11 +489,13 @@ div.hero .content .cta-btn {
 }
 
 .most-loved {
+  z-index: 7;
   animation: fadeIn 2.3s;
 }
 .most-loved-header {
   margin-top: 8rem;
   margin-bottom: var(--most-loved-header-margin);
+  z-index: 7;
 }
 .most-loved-carousel {
   cursor: pointer;
@@ -525,6 +531,7 @@ div.hero .content .cta-btn {
 }
 
 .section-choose {
+  z-index: 7;
   background-color: #ffe9ed;
   border-radius: var(--choose-border-radius);
   animation: fadeIn 2.3s;
@@ -603,6 +610,7 @@ div.hero .content .cta-btn {
 }
 
 .delicious {
+  z-index: 7;
   animation: fadeIn 2.3s;
   margin-top: -2rem;
 }

@@ -90,12 +90,12 @@ intersectionContainer.forEach(item => {
 
 
 // ***** PARTICLES / SPRINKLES *****
-var particles_settings = "assets/js/particles.json"
-var particles_duplicity = ['particles1', 'particles2', 'particles4', 'particles5']
+// var particles_settings = "assets/js/particles.json"
+// var particles_duplicity = ['particles1', 'particles2', 'particles4', 'particles5']
     
-particles_duplicity.forEach(function(element) {
-  console.log(element);
-  particlesJS.load(element, particles_settings, function () {
-    console.log("callback - particles.js config loaded");
-  })
-})
+// particles_duplicity.forEach(function(element) {
+//   console.log(element);
+//   particlesJS.load(element, particles_settings, function () {
+//     console.log("callback - particles.js config loaded");
+//   })
+// })

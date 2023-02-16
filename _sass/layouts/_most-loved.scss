@@ -1,9 +1,11 @@
 .most-loved {
+    z-index:7;
     animation: fadeIn $fade-animation-time;
 
     &-header {
         margin-top: $subheading-margin;
         margin-bottom: var(--most-loved-header-margin);
+        z-index:7;
     }
 
     &-carousel {

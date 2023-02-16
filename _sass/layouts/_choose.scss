@@ -1,4 +1,5 @@
 .section-choose {
+    z-index:7;
     background-color: lighten(pink, 8%);
     border-radius: var(--choose-border-radius);
     animation: fadeIn $fade-animation-time;
