@@ -99,3 +99,7 @@ intersectionContainer.forEach(item => {
 //     console.log("callback - particles.js config loaded");
 //   })
 // })
+
+window.addEventListener('scroll', () => {
+  document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+}, false);

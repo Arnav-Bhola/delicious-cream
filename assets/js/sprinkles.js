@@ -2,8 +2,7 @@
 //	Settings
 //==================================================================================================
 const canvasColour = "white"; //#3a3335
-const ballColours = ["#00b2d6", "#D5035E", "#F9E814"];
-const rectColours = ["#00b2d6", "#FF0000", "#FFFF00"];
+const rectColours = ["#00b2d6", "#FF0000", "#FFFF00", "#FFC0CB"];
 
 //==================================================================================================
 //	Shapes
@@ -87,7 +86,7 @@ class Rectangle extends Shape {
 function initShapes() {
   canvas.shapes = [];
   //Rectangles
-  for (i = 0; i < 50; i++) {
+  for (i = 0; i < 30; i++) {
     const rect = new Rectangle();
     rect.draw();
     canvas.shapes.push(rect);

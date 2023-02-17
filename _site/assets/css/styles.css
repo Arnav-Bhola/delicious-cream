@@ -64,9 +64,44 @@ $breakpoint arguement choices:
   }
 }
 
+.sliderWrapper {
+  position: sticky;
+  bottom: 100px;
+  padding-bottom: 20px;
+  z-index: -10;
+  overflow: hidden;
+  width: 100%;
+}
+
+.sliderContainer {
+  display: flex;
+  margin: 100px auto;
+  rotate: -8.2deg;
+  width: 120%;
+}
+.sliderContainer .slider {
+  display: flex;
+  animation: slider 20s linear 0s infinite;
+}
+.sliderContainer .slide {
+  margin: 0 5px;
+  overflow: hidden;
+}
+.sliderContainer .txt {
+  font-size: 64px;
+  font-family: "Kalam", cursive;
+  white-space: nowrap;
+  color: hsl(184deg, 75%, 38%);
+}
 @keyframes slider {
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderContainer {
+    display: none;
   }
 }
 @keyframes pulsate {
@@ -196,11 +231,25 @@ p {
 canvas.particles {
   width: 100%;
   height: 100%;
-  position: fixed;
-  top: 0;
+  position: absolute;
   left: 0;
   z-index: 5;
   animation: fadeIn 2.3s;
+}
+canvas.particles-1 {
+  top: 0;
+}
+canvas.particles-2 {
+  top: 100vh;
+}
+canvas.particles-3 {
+  top: 200vh;
+}
+canvas.particles-4 {
+  top: 300vh;
+}
+canvas.particles-5 {
+  top: 400vh;
 }
 
 .btn {
@@ -228,36 +277,6 @@ canvas.particles {
   --color-primary-lightness: 50%;
   background-color: transparent;
   color: var(--color-primary);
-}
-
-.sliderWrapper {
-  position: sticky;
-  bottom: 10rem;
-  padding-bottom: 2rem;
-  z-index: -10;
-  overflow: hidden;
-  width: 100%;
-}
-
-.sliderContainer {
-  display: flex;
-  margin: 10rem auto;
-  rotate: -8.2deg;
-  width: 120%;
-}
-.sliderContainer .slider {
-  display: flex;
-  animation: slider 20s linear 0s infinite;
-}
-.sliderContainer .slide {
-  margin: 0 0.5rem;
-  overflow: hidden;
-}
-.sliderContainer .txt {
-  font-size: 6.4rem;
-  font-family: "Kalam", cursive;
-  white-space: nowrap;
-  color: hsl(184deg, 75%, 38%);
 }
 
 .navbar {
@@ -609,54 +628,40 @@ div.hero .content .cta-btn {
   animation: pulsate 0.85s infinite;
 }
 
-.delicious {
+#delicious {
   z-index: 7;
-  animation: fadeIn 2.3s;
-  margin-top: -2rem;
+  margin-top: 50px;
 }
-.delicious .flexContainer {
-  z-index: 7;
+#delicious .flexContainer {
   display: flex;
   margin: 10px;
 }
-.delicious .flexContainer div {
+#delicious .flexContainer div {
   flex: 1;
 }
-.delicious .flexContainer .txt {
+#delicious .flexContainer .txt {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Inter", "sans-serif";
+  z-index: 5;
 }
-.delicious .flexContainer .txt h3,
-.delicious .flexContainer .txt p {
+#delicious .flexContainer .txt h3,
+#delicious .flexContainer .txt p {
   width: 70%;
 }
-.delicious .flexContainer .txt h3 {
-  font-style: italic;
-  font-weight: bold;
-}
-.delicious .flexContainer .imgContainer {
+#delicious .flexContainer .imgContainer {
+  border-radius: 5rem;
   overflow: hidden;
+  z-index: 2;
   position: relative;
-  margin-right: 2rem 7rem;
-  border-radius: var(--delicious-img-border-radius);
 }
-.delicious .flexContainer .imgContainer img {
-  border-radius: var(--delicious-img-border-radius);
+#delicious .flexContainer .imgContainer img {
   width: 100%;
   object-fit: cover;
-  z-index: 10;
-  position: relative;
-  transition: all 0.4s ease;
-  cursor: pointer;
 }
-.delicious .flexContainer .imgContainer img:hover {
-  transform: scale(var(--image-scale-factor));
-}
-.delicious .flexContainer .imgContainer::before,
-.delicious .flexContainer .imgContainer::after {
+#delicious .flexContainer .imgContainer::before,
+#delicious .flexContainer .imgContainer::after {
   content: "";
   z-index: 3;
   width: 100%;
@@ -668,49 +673,39 @@ div.hero .content .cta-btn {
   display: block;
   object-fit: cover;
 }
-.delicious .flexContainer .imgContainer::after {
+#delicious .flexContainer .imgContainer::after {
   top: 50%;
 }
-.delicious .flexContainer:nth-child(odd) {
+#delicious .flexContainer:nth-child(odd) {
   flex-direction: row-reverse;
 }
-.delicious .flexContainer:nth-child(odd).show .imgContainer::before {
+#delicious .flexContainer:nth-child(odd).show .imgContainer::before {
   transform: translateX(100%);
 }
-.delicious .flexContainer:nth-child(even).show .imgContainer::before {
+#delicious .flexContainer:nth-child(even).show .imgContainer::before {
   transform: translateX(-100%);
 }
-.delicious .flexContainer:nth-child(odd).show .imgContainer::after {
+#delicious .flexContainer:nth-child(odd).show .imgContainer::after {
   transform: translateX(-100%);
 }
-.delicious .flexContainer:nth-child(even).show .imgContainer::after {
+#delicious .flexContainer:nth-child(even).show .imgContainer::after {
   transform: translateX(100%);
 }
 @media (max-width: 768px) {
-  .delicious .flexContainer:nth-child(odd), .delicious .flexContainer {
+  #delicious .flexContainer:nth-child(odd), #delicious .flexContainer {
     border: 4px solid #333;
-    border-radius: var(--delicious-img-border-radius);
+    border-radius: 8px;
     flex-direction: column-reverse;
     padding: 5px;
   }
-  .delicious .flexContainer:nth-child(odd) .txt, .delicious .flexContainer .txt {
+  #delicious .flexContainer:nth-child(odd) .txt, #delicious .flexContainer .txt {
     width: 90%;
     margin: auto;
   }
-  .delicious .flexContainer:nth-child(odd) .txt p, .delicious .flexContainer .txt p {
-    font-style: italic;
-  }
-  .delicious .flexContainer:nth-child(odd) .imgContainer, .delicious .flexContainer .imgContainer {
+  #delicious .flexContainer:nth-child(odd) .imgContainer, #delicious .flexContainer .imgContainer {
     width: 70%;
     margin: auto;
-    border-radius: var(--delicious-img-border-radius);
+    border-radius: 8px;
     overflow: hidden;
   }
 }
-
-.delicious-header {
-  margin-top: 8rem;
-  margin-bottom: 3rem;
-}
-
-/*# sourceMappingURL=styles.css.map */
