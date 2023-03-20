@@ -228,30 +228,6 @@ p {
   margin: 0 0.3rem !important;
 }
 
-canvas.particles {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  z-index: 5;
-  animation: fadeIn 2.3s;
-}
-canvas.particles-1 {
-  top: 0;
-}
-canvas.particles-2 {
-  top: 100vh;
-}
-canvas.particles-3 {
-  top: 200vh;
-}
-canvas.particles-4 {
-  top: 300vh;
-}
-canvas.particles-5 {
-  top: 400vh;
-}
-
 .btn {
   padding: 1rem 3rem;
   border-radius: 3rem;
@@ -277,6 +253,23 @@ canvas.particles-5 {
   --color-primary-lightness: 50%;
   background-color: transparent;
   color: var(--color-primary);
+}
+
+.explore {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.btn-explore {
+  color: var(--color-aqua-slightly-light);
+  font-family: "Kalam", cursive;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--best-seller-heading-font-size);
+  line-height: 5.7rem;
+  text-align: center;
+  animation: fadeIn 2.3s;
 }
 
 .navbar {
@@ -692,17 +685,20 @@ div.hero .content .cta-btn {
   transform: translateX(100%);
 }
 @media (max-width: 768px) {
-  #delicious .flexContainer:nth-child(odd), #delicious .flexContainer {
+  #delicious .flexContainer:nth-child(odd),
+  #delicious .flexContainer {
     border: 4px solid #333;
     border-radius: 8px;
     flex-direction: column-reverse;
     padding: 5px;
   }
-  #delicious .flexContainer:nth-child(odd) .txt, #delicious .flexContainer .txt {
+  #delicious .flexContainer:nth-child(odd) .txt,
+  #delicious .flexContainer .txt {
     width: 90%;
     margin: auto;
   }
-  #delicious .flexContainer:nth-child(odd) .imgContainer, #delicious .flexContainer .imgContainer {
+  #delicious .flexContainer:nth-child(odd) .imgContainer,
+  #delicious .flexContainer .imgContainer {
     width: 70%;
     margin: auto;
     border-radius: 8px;
@@ -715,6 +711,7 @@ div.hero .content .cta-btn {
   height: 60vmin;
   display: flex;
   border-radius: 8px;
+  margin-top: 7.5rem;
 }
 
 .msg {
@@ -724,21 +721,26 @@ div.hero .content .cta-btn {
   --color-primary-lightness: 50%;
   align-self: center;
   margin: 30px;
+  margin-left: 16rem;
   max-width: 50%;
   color: var(--color-primary);
 }
 .msg h3 {
-  color: #D21F95;
+  color: #d21f95;
+  font-size: 5rem;
+}
+.msg p {
+  font-size: 1.8rem;
 }
 .msg button {
   padding: 5px 10px;
   border-radius: 8px;
   font-size: medium;
-  padding: 10px 30px;
+  padding: 12px 40px;
   border-radius: 30px;
   color: var(--color-primary);
   font-weight: 400;
-  font-size: toRem(16);
+  font-size: 2rem;
   background-color: transparent;
   border: none;
   box-shadow: 1px 1px 3px 1px hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness));
@@ -797,25 +799,25 @@ div.hero .content .cta-btn {
 .left {
   background-color: #ccc;
   transform: rotateY(90deg) translateZ(calc(var(--size) * 0.5));
-  background-image: url("assets/images/ice-cta-1.jpg");
+  background-image: url("../../assets/images/ice-cta-1.jpg");
 }
 
 .right {
   background-color: #ddd;
   transform: rotateY(-90deg) translateZ(calc(var(--size) * 0.5));
-  background-image: url("assets/images/ice-cta-3.jpg");
+  background-image: url("../../assets/images/ice-cta-3.jpg");
 }
 
 .front {
   background-color: #aaa;
   transform: translateZ(calc(var(--size) * 0.5));
-  background-image: url("assets/images/ice-cta-2.jpg");
+  background-image: url("../../assets/images/ice-cta-2.jpg");
 }
 
 .back {
   background-color: #bbb;
   transform: translateZ(calc(var(--size) * -0.5));
-  background-image: url("assets/images/ice-cta-4.jpg");
+  background-image: url("../../assets/images/ice-cta-4.jpg");
 }
 
 @media (max-width: 768px) {
