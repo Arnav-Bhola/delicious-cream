@@ -1,19 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include head.html %}
-<body>
-    
-    <canvas class="particles particles-1"> </canvas>
-    <canvas class="particles particles-2"> </canvas>
-    <canvas class="particles particles-3"> </canvas>
-    <canvas class="particles particles-4"> </canvas>
-    <canvas class="particles particles-5"> </canvas>
-    
-    <div class="container">
-        {% include navigation.html %}
-        {{ content }}
-    </div>
-    {% include footer.html %}
-    {% include scripts.html %}
-</body>
+  {% include head.html %}
+  <body>
+    <div class="container">{% include navigation.html %} {{ content }}</div>
+    {% include footer.html %} {% include scripts.html %}
+  </body>
 </html>

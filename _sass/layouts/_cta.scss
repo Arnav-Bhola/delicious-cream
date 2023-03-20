@@ -1,126 +1,126 @@
 .cta {
-    background-color: antiquewhite;
-    height: 60vmin;
-    display: flex;
-    border-radius: 8px;
+  background-color: antiquewhite;
+  height: 60vmin;
+  display: flex;
+  border-radius: 8px;
+  margin-top: 7.5rem;
 }
 
 .msg {
-    // colors. using css variable due to some limitations with scss variables
-    --color-primary: hsl(184, 75%, 38%);
-    --color-primary-hue: 184;
-    --color-primary-saturation: 75%;
-    --color-primary-lightness: 50%;
+  // colors. using css variable due to some limitations with scss variables
+  --color-primary: hsl(184, 75%, 38%);
+  --color-primary-hue: 184;
+  --color-primary-saturation: 75%;
+  --color-primary-lightness: 50%;
 
+  align-self: center;
+  margin: 30px;
 
-    align-self: center;
-    margin: 30px;
-    max-width: 50%;
+  margin-left: 16rem;
+  max-width: 50%;
+  color: var(--color-primary);
+  h3 {
+    color: #d21f95;
+    font-size: 5rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+
+  button {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: medium;
+    padding: 12px 40px;
+    border-radius: 30px;
     color: var(--color-primary);
-    h3 {
-        color: #D21F95;
-    }
-
-
-    button {
-        padding: 5px 10px;
-        border-radius: 8px;
-        font-size: medium;
-        padding: 10px 30px;
-        border-radius: 30px;
-        color: var(--color-primary);
-        font-weight: 400;
-        font-size: toRem(16);
-        background-color: transparent;
-        border: none;
-        box-shadow: 1px 1px 3px 1px hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness));
-    }
-    button:hover {
-        background-color: var(--color-primary);
-        color: #eee;
-
-    }
+    font-weight: 400;
+    font-size: toRem(20);
+    background-color: transparent;
+    border: none;
+    box-shadow: 1px 1px 3px 1px
+      hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness));
+  }
+  button:hover {
+    background-color: var(--color-primary);
+    color: #eee;
+  }
 }
 
 .cube-wrap {
-    --size: 30vmin;
-    position: relative;
-    width: 0;
-    height: 0;
-    perspective: 100vmin;
-    margin: auto;
+  --size: 30vmin;
+  position: relative;
+  width: 0;
+  height: 0;
+  perspective: 100vmin;
+  margin: auto;
 }
 
 .cube {
-    transform-style: preserve-3d;
-    transform: rotateX(-10deg) rotateZ(0deg) rotateY(0deg);
-    animation: cube 8s linear;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg) rotateZ(0deg) rotateY(0deg);
+  animation: cube 8s linear;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
 }
 
 @keyframes cube {
-    to {
-        transform: rotateX(-10deg) rotateZ(0deg) rotateY(360deg);
-    }
+  to {
+    transform: rotateX(-10deg) rotateZ(0deg) rotateY(360deg);
+  }
 }
 
 .side {
-    position: absolute;
-    width: var(--size);
-    height: var(--size);
-    background-color: #eee;
-    backface-visibility: visible;
-    top: calc(var(--size) * -.5);
-    left: calc(var(--size) * -.5);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background-color: #eee;
+  backface-visibility: visible;
+  top: calc(var(--size) * -0.5);
+  left: calc(var(--size) * -0.5);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .top {
-    background-color: #ffffff;
-    transform: rotateX(90deg) translateZ(calc(var(--size) * .5));
+  background-color: #ffffff;
+  transform: rotateX(90deg) translateZ(calc(var(--size) * 0.5));
 }
 
 .bottom {
-    background-color: #999;
-    transform: rotateX(90deg) translateZ(calc(var(--size) * -.5));
+  background-color: #999;
+  transform: rotateX(90deg) translateZ(calc(var(--size) * -0.5));
 }
 
 .left {
-    background-color: #ccc;
-    transform: rotateY(90deg) translateZ(calc(var(--size) * .5));
-    background-image: url('assets/images/ice-cta-1.jpg');
-
+  background-color: #ccc;
+  transform: rotateY(90deg) translateZ(calc(var(--size) * 0.5));
+  background-image: url("../../assets/images/ice-cta-1.jpg");
 }
 
 .right {
-    background-color: #ddd;
-    transform: rotateY(-90deg) translateZ(calc(var(--size) * .5));
-    background-image: url('assets/images/ice-cta-3.jpg');
- 
+  background-color: #ddd;
+  transform: rotateY(-90deg) translateZ(calc(var(--size) * 0.5));
+  background-image: url("../../assets/images/ice-cta-3.jpg");
 }
 
 .front {
-    background-color: #aaa;
-    transform: translateZ(calc(var(--size) * .5));
-    background-image: url('assets/images/ice-cta-2.jpg');
-
+  background-color: #aaa;
+  transform: translateZ(calc(var(--size) * 0.5));
+  background-image: url("../../assets/images/ice-cta-2.jpg");
 }
 
 .back {
-    background-color: #bbb;
-    transform: translateZ(calc(var(--size) * -.5));
-    background-image: url('assets/images/ice-cta-4.jpg');
-
+  background-color: #bbb;
+  transform: translateZ(calc(var(--size) * -0.5));
+  background-image: url("../../assets/images/ice-cta-4.jpg");
 }
 
 @media (max-width: 768px) {
-
-    .cta {
-        flex-direction: column;
-        height: 100vmin;
-    }
+  .cta {
+    flex-direction: column;
+    height: 100vmin;
+  }
 }

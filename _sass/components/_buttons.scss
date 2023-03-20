@@ -1,28 +1,45 @@
 .btn {
-    padding: 1rem 3rem;
-    border-radius: 3rem;
-    color: var(--color-primary);
-    font-weight: 400;
-    font-size: 1.6rem;
-    background-color: transparent;
-    border: none;
-    box-shadow: .1rem .1rem .3rem .1rem hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness));
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: 1.6rem;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem
+    hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness));
 
-    &:hover {
-        background-color: var(--color-primary);
-        color: #eee;
-    }
+  &:hover {
+    background-color: var(--color-primary);
+    color: #eee;
+  }
 }
 
 .btn-filled {
-    --color-primary-lightness: 30%;
-    margin: 0 1rem;
-    background-color: var(--color-primary);
-    color: #eee;
+  --color-primary-lightness: 30%;
+  margin: 0 1rem;
+  background-color: var(--color-primary);
+  color: #eee;
 
-    &:hover {
-        --color-primary-lightness: 50%;
-        background-color: transparent;
-        color: var(--color-primary);
-    }
+  &:hover {
+    --color-primary-lightness: 50%;
+    background-color: transparent;
+    color: var(--color-primary);
+  }
+}
+
+.explore {
+  text-align: center;
+  margin-top: 5rem;
+}
+.btn-explore {
+  color: var(--color-aqua-slightly-light);
+  font-family: "Kalam", cursive;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--best-seller-heading-font-size);
+  line-height: 5.7rem;
+  text-align: center;
+  animation: fadeIn $fade-animation-time;
 }

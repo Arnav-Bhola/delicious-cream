@@ -16,39 +16,52 @@ $breakpoint arguement choices:
 */
 
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { @content };     // 600px
-    }
-    @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em) { @content };        // 900px
-    }
-    @if $breakpoint == tab-land {
-        @media only screen and (max-width: 75em) { @content };       // 1200px
-    }
-    @if $breakpoint == big-desktop {
-        @media only screen and (min-width: 112.50em) { @content };       // 1800px
-    }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } // 600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } // 900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } // 1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } // 1800px
+  }
 }
 
 @mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 @mixin absCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin imgBoxShadow {
-    box-shadow: 0 0 3rem #888888,
+  box-shadow: 0 0 3rem #888888;
+}
+
+@function toRem($value) {
+  $remValue: ($value / 10) + rem; // default font value is changed in _base.scss
+  @return $remValue;
 }
 
 @mixin textShadow($blur, $color) {
-    text-shadow: 3px 2px $blur $color;
+  text-shadow: 3px 2px $blur $color;
 }
